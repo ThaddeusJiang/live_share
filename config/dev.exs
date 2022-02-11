@@ -24,6 +24,7 @@ config :live_share, LiveShareWeb.Endpoint,
   debug_errors: true,
   secret_key_base: "vTg7bRniCGng4Fo64bfH/7unysLsiqrAEwoIo8v49cTmfoJFSgjp4Z2sq0GTIFYp",
   watchers: [
+    tailwind: {Tailwind, :install_and_run, [:default, ~w(--watch)]},
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
     esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
   ]
