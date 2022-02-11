@@ -15,9 +15,10 @@ defmodule LiveShare.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: LiveShare.PubSub},
       # Start the Endpoint (http/https)
-      LiveShareWeb.Endpoint
+      LiveShareWeb.Endpoint,
       # Start a worker by calling: LiveShare.Worker.start_link(arg)
       # {LiveShare.Worker, arg}
+      LiveShareWeb.Presence
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
